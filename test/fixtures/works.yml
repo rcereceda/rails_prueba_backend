@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: trabajos realizados 01
+  user_id: one
+
+two:
+  description: trabajos realizados 02
+  user_id: one
+
+three:
+  description: trabajos realizados 03
+  user_id: two
