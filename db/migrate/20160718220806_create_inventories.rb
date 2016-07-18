@@ -1,7 +1,7 @@
 class CreateInventories < ActiveRecord::Migration
   def change
     create_table :inventories do |t|
-      t.integer :serial, null: false, unique: true
+      t.integer :serial, unique: true, null: false 
       t.integer :wheelsize
       t.string :description
       t.references :category, index: true, foreign_key: true
