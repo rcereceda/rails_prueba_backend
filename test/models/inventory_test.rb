@@ -19,4 +19,9 @@ class InventoryTest < ActiveSupport::TestCase
   	@inventory.wheelsize = 0
   	assert_not @inventory.valid?
   end
+
+  test "deleted items register on table" do
+  	@inventory.destroy
+  	assert_not_empty Register.where('description LIKE ?', "%#{@inventory.serial}%")
+  end
 end
