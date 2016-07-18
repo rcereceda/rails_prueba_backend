@@ -12,4 +12,9 @@ class WorkTest < ActiveSupport::TestCase
   test "work must have a user" do
   	assert_not_nil @work.user_id
   end
+
+  test "work not includes items" do
+  	values = Work.no_items.map(&:inventory_id)
+  	assert_includes(values, nil)
+  end
 end
