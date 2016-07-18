@@ -1,6 +1,6 @@
 class Inventory < ActiveRecord::Base
   belongs_to :category
-  has_one :work
+  has_one :work, dependent: :destroy
   validates :serial, presence: true, uniqueness: true
   validates :wheelsize, numericality: { greater_than: 0 }
 
