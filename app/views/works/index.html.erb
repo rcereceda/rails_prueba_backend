@@ -1,0 +1,10 @@
+<h1>Works</h1>
+
+<ul>
+	<% @works.each do |w| %>
+	<li>
+		<%= w.description %>, realizado por: <%= w.user.name %>, ítem: <%= w.inventory.description %> (Categoría: <%= w.inventory.category.name %>)
+		<a href="<%= delete_work_path(w.id) %>" data-method="delete">Borrar</a>
+	</li>
+	<% end %>
+</ul>
